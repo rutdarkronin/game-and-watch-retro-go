@@ -187,13 +187,13 @@ extern unsigned short button_state[3];
 
 #if GNW_TARGET_ZELDA != 0
 
-const char ODROID_INPUT_DEF_C = ODROID_INPUT_X;
+const char ODROID_INPUT_DEF_C = ODROID_INPUT_A;
 static int ABCkeys_value = 5;
-static int PAD_A_def = ODROID_INPUT_A;
+static int PAD_A_def = ODROID_INPUT_Y;
 static int PAD_B_def = ODROID_INPUT_B;
 static int PAD_C_def = ODROID_INPUT_DEF_C;
-static const char ABCkeys_combo_str[NB_OF_COMBO][10] = {"B-A-START", "A-B-START","B-START-A","A-START-B","START-A-B","START-B-A"};
-static char ABCkeys_str[10]="START-B-A";
+static const char ABCkeys_combo_str[NB_OF_COMBO][10] = {"B-A-SELECT", "A-B-SELECT","B-SELECT-A","A-SELECT-B","SELECT-A-B","SELECT-B-A"};
+static char ABCkeys_str[10]="SELECT-B-A";
 
 #else
 
@@ -235,7 +235,7 @@ void gwenesis_io_get_buttons()
                     host_joystick.values[PAD_A_def] << PAD_A |
                     host_joystick.values[PAD_B_def] << PAD_B |
                     host_joystick.values[PAD_C_def] << PAD_C |
-                    host_joystick.values[ODROID_INPUT_START] << PAD_S;
+                    host_joystick.values[ODROID_INPUT_X] << PAD_S;
                   
   button_state[0] = ~ button_state[0];
 
@@ -483,36 +483,36 @@ static bool gwenesis_submenu_setABC(odroid_dialog_choice_t *option, odroid_dialo
     switch (ABCkeys_value) {
     case 0:
       PAD_A_def = ODROID_INPUT_B;
-      PAD_B_def = ODROID_INPUT_A;
+      PAD_B_def = ODROID_INPUT_Y;
       PAD_C_def = ODROID_INPUT_DEF_C;
       break;
     case 1:
-      PAD_A_def = ODROID_INPUT_A;
+      PAD_A_def = ODROID_INPUT_Y;
       PAD_B_def = ODROID_INPUT_B;
       PAD_C_def = ODROID_INPUT_DEF_C;
       break;
     case 2:
       PAD_A_def = ODROID_INPUT_B;
       PAD_B_def = ODROID_INPUT_DEF_C;
-      PAD_C_def = ODROID_INPUT_A;
+      PAD_C_def = ODROID_INPUT_Y;
       break;
     case 3:
-      PAD_A_def = ODROID_INPUT_A;
+      PAD_A_def = ODROID_INPUT_Y;
       PAD_B_def = ODROID_INPUT_DEF_C;
       PAD_C_def = ODROID_INPUT_B;
       break;
     case 4:
       PAD_A_def = ODROID_INPUT_DEF_C;
-      PAD_B_def = ODROID_INPUT_A;
+      PAD_B_def = ODROID_INPUT_Y;
       PAD_C_def = ODROID_INPUT_B;
       break;
     case 5:
       PAD_A_def = ODROID_INPUT_DEF_C;
       PAD_B_def = ODROID_INPUT_B;
-      PAD_C_def = ODROID_INPUT_A;
+      PAD_C_def = ODROID_INPUT_Y;
       break;
     default:
-      PAD_A_def = ODROID_INPUT_A;
+      PAD_A_def = ODROID_INPUT_Y;
       PAD_B_def = ODROID_INPUT_B;
       PAD_C_def = ODROID_INPUT_DEF_C;
       break;
