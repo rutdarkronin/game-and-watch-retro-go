@@ -483,33 +483,33 @@ static bool gwenesis_submenu_setABC(odroid_dialog_choice_t *option, odroid_dialo
     switch (ABCkeys_value) {
     case 0:
       PAD_A_def = ODROID_INPUT_B;
-      PAD_B_def = ODROID_INPUT_Y;
-      PAD_C_def = ODROID_INPUT_DEF_C;
+      PAD_B_def = ODROID_INPUT_DEF_C;
+      PAD_C_def = ODROID_INPUT_Y;
       break;
     case 1:
-      PAD_A_def = ODROID_INPUT_Y;
+      PAD_A_def = ODROID_INPUT_DEF_C;
       PAD_B_def = ODROID_INPUT_B;
-      PAD_C_def = ODROID_INPUT_DEF_C;
+      PAD_C_def = ODROID_INPUT_Y;
       break;
     case 2:
       PAD_A_def = ODROID_INPUT_B;
-      PAD_B_def = ODROID_INPUT_DEF_C;
-      PAD_C_def = ODROID_INPUT_Y;
+      PAD_B_def = ODROID_INPUT_Y;
+      PAD_C_def = ODROID_INPUT_DEF_C;
       break;
     case 3:
-      PAD_A_def = ODROID_INPUT_Y;
-      PAD_B_def = ODROID_INPUT_DEF_C;
-      PAD_C_def = ODROID_INPUT_B;
-      break;
-    case 4:
       PAD_A_def = ODROID_INPUT_DEF_C;
       PAD_B_def = ODROID_INPUT_Y;
       PAD_C_def = ODROID_INPUT_B;
       break;
+    case 4:
+      PAD_A_def = ODROID_INPUT_Y;
+      PAD_B_def = ODROID_INPUT_DEF_C;
+      PAD_C_def = ODROID_INPUT_B;
+      break;
     case 5:
-      PAD_A_def = ODROID_INPUT_DEF_C;
+      PAD_A_def = ODROID_INPUT_Y;
       PAD_B_def = ODROID_INPUT_B;
-      PAD_C_def = ODROID_INPUT_Y;
+      PAD_C_def = ODROID_INPUT_DEF_C;
       break;
     default:
       PAD_A_def = ODROID_INPUT_Y;
