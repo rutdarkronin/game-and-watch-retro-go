@@ -192,8 +192,8 @@ static int ABCkeys_value = 5;
 static int PAD_A_def = ODROID_INPUT_Y;
 static int PAD_B_def = ODROID_INPUT_B;
 static int PAD_C_def = ODROID_INPUT_DEF_C;
-static const char ABCkeys_combo_str[NB_OF_COMBO][10] = {"B-A-SELECT", "A-B-SELECT","B-SELECT-A","A-SELECT-B","SELECT-A-B","SELECT-B-A"};
-static char ABCkeys_str[10]="SELECT-B-A";
+static const char ABCkeys_combo_str[NB_OF_COMBO][10] = {"B-A-SEL", "A-B-SEL","B-SEL-A","A-SEL-B","SEL-A-B","SEL-B-A"};
+static char ABCkeys_str[10]="SEL-B-A";
 
 #else
 
